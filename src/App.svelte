@@ -1,45 +1,27 @@
 <script>
-  import svelteLogo from './assets/svelte.svg'
-  import Counter from './lib/Counter.svelte'
+    let paragraph = '';
+    let words = [];
+
+    function countWords() {
+        if (paragraph) {
+            words = paragraph.split(' ')
+            console.log(words)
+        }
+    }
+
+    function loadSample() {
+        paragraph = 'Disaster Baker hand rail deck boned out coffin rad fakie out. Kick-nose half-flip powerslide 900 Japan air slide Ed Templeton poseur. Full pipe hang-up birdie helipop masonite pressure flip aerial Rector. Pivot steps manual coffin heel flip stoked bail. Lip hurricane stalefish skate key sketchy opposite footed downhill. Casper noseblunt slide axle set camel back rock and roll acid drop risers. Rad locals masonite Cross Bones melancholy stoked steps 1080. Powell Peralta slappy axle set launch ramp nose grab g-turn lien air frontside. Roll-in 1080 cess slide axle full-cab kidney stoked. Sidewalk Surfer half-flip grab full pipe tail aerial nollie hospital flip. '
+    }
 </script>
 
-<main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank"> 
-      <img src="/vite.svg" class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank"> 
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
-  <h1>Vite + Svelte</h1>
+<div class="wf">
+    <textarea bind:value={paragraph} id="textarea-freq" placeholder="Enter text"></textarea>
+    <button on:click={countWords}>Count words</button>
+    <button on:click={loadSample}>Load sample</button>
+</div>
 
-  <div class="card">
-    <Counter />
-  </div>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
-</main>
+<div>{words}</div>
 
 <style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
-  .read-the-docs {
-    color: #888;
-  }
+
 </style>
