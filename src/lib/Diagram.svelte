@@ -2,7 +2,7 @@
 
 </script>
 
-<div>Diagram soon...</div>
+<div>Coming soon...</div>
 
 <style>
     div {
@@ -10,7 +10,7 @@
         background-color: #fff;
         display: grid;
         justify-content: center;
-        padding-top: 50px;
+        padding: 50px 0;
 
         font-size: 30px;
         line-height: 28px;
