@@ -1,18 +1,25 @@
 <script>
+    import Table from "./lib/Table.svelte";
+
     let text = '';
     let words = [];
 
     function countWords() {
         if (text) {
-            words = text.split(' ');
+
+            words = text
+                .toLowerCase()
+                .replace(/[^\w\s\\']|_/g, "") // Remove punctuations
+                .replace(/\s+/g, " ") // Replace empty lines, tabs, etc. with space
+                .split(' ');
 
             // Filter repeating words in array
             let wordsFiltered = [...new Set(words)];
 
-            // Generate and sort array with objects
+            // Generate array with objects
             words = wordsFiltered
                 .map((word) => {
-                    // Get the number of identical words
+                    // Get the number of the same words
                     let num = words.filter(x => x === word).length;
                     return {word, num};
                 })
@@ -31,11 +38,7 @@
     <button on:click={loadSample}>Load sample</button>
 </div>
 
-<ul>
-    {#each words as {word, num}}
-        <li>{word}: {num} times</li>
-    {/each}
-</ul>
+<Table words={words}/>
 
 <style>
 
