@@ -4,6 +4,10 @@
     let text = '';
     let words = [];
 
+    function loadSample() {
+        text = '"Anything that happens, happens. Anything that, in happening, causes something else to happen, causes something else to happen. Anything that, in happening, causes itself to happen again, happens again. It doesn\'t necessarily do it in chronological order, though."'
+    }
+
     function countWords() {
         if (text) {
 
@@ -25,10 +29,6 @@
                 })
                 .sort((firstWord, secondWord) => secondWord.num - firstWord.num);
             }
-    }
-
-    function loadSample() {
-        text = 'Disaster Baker hand rail deck boned out coffin rad fakie out. Kick-nose half-flip powerslide 900 Japan air slide Ed Templeton poseur. Full pipe hang-up birdie helipop masonite pressure flip aerial Rector. Pivot steps manual coffin heel flip stoked bail. Lip hurricane stalefish skate key sketchy opposite footed downhill. Casper noseblunt slide axle set camel back rock and roll acid drop risers. Rad locals masonite Cross Bones melancholy stoked steps 1080. Powell Peralta slappy axle set launch ramp nose grab g-turn lien air frontside. Roll-in 1080 cess slide axle full-cab kidney stoked. Sidewalk Surfer half-flip grab full pipe tail aerial nollie hospital flip. '
     }
 </script>
 
