@@ -1,11 +1,14 @@
+@import './assets/reset.css';
+
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 24px;
-  font-weight: 400;
+  font-weight: 500;
 
   color: #000;
-  background-color: #fff;
+  background-color: #0d6bc4;
+  background-image: url("data:image/svg+xml,%3Csvg width='44' height='12' viewBox='0 0 44 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 12v-2L0 0v10l4 2h16zm18 0l4-2V0L22 10v2h16zM20 0v8L4 0h16zm18 0L22 8V0h16z' fill='%235ca7ee' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
 body {
@@ -14,13 +17,15 @@ body {
 }
 
 #app {
-  max-width: 649px;
+  max-width: 849px;
   margin: 0 auto;
   padding: 1rem;
-}
 
-textarea {
-  width: 100%;
-  min-height: 249px;
-  resize: none;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  'wf wf'
+  'table diagram'
+  ;
 }
