@@ -29,3 +29,15 @@ body {
   'table diagram'
   ;
 }
+
+@media (max-width: 652px) {
+  #app {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    grid-template-areas:
+    'input'
+    'table'
+    'diagram'
+    ;
+  }
+}
