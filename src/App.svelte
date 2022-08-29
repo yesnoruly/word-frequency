@@ -33,7 +33,7 @@
     }
 </script>
 
-<Input value={text} countWords={countWords} loadSample={loadSample} />
+<Input bind:value={text} countWords={countWords} loadSample={loadSample} />
 
 {#if words.length}
     <Table words={words}/>
