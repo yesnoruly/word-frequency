@@ -31,17 +31,6 @@
         position: relative;
     }
 
-    div:before {
-        content: '';
-        background: url('../assets/icons/list.svg') no-repeat;
-        width: 68px;
-        height: 68px;
-        position: absolute;
-        left: -20px;
-        top: -20px;
-        transform: rotate(-25deg);
-    }
-
     table {
         text-align: center;
         border-collapse: collapse;

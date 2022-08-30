@@ -18,17 +18,6 @@
         position: relative;
     }
 
-    .input:before {
-        content: '';
-        background: url('../assets/icons/keyboard.svg') no-repeat;
-        width: 91px;
-        height: 74px;
-        position: absolute;
-        right: -30px;
-        top: -30px;
-        transform: rotate(20deg);
-    }
-
     textarea {
         font-family: 'Roboto Mono', sans-serif;
         width: 100%;

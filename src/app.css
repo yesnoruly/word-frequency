@@ -29,7 +29,6 @@ body {
   'input input'
   'table diagram'
   ;
-  overflow-x: hidden;
 }
 
 @media (max-width: 652px) {

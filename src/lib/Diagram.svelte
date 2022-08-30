@@ -20,15 +20,4 @@
         color: #072240;
         position: relative;
     }
-
-    div:before {
-        content: '';
-        background: url('../assets/icons/diagram.svg') no-repeat;
-        width: 54px;
-        height: 54px;
-        position: absolute;
-        bottom: -5px;
-        right: -7px;
-        transform: rotate(30deg);
-    }
 </style>
