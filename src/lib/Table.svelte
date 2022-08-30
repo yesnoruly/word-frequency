@@ -65,6 +65,12 @@
 
         width: 150px;
     }
+    
+    @media (max-width: 800px) {
+        th {
+            font-size: 14px;
+        }
+    }
 
     tr {
         font-family: Roboto, sans-serif;
