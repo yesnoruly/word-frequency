@@ -4,7 +4,7 @@
 
 ### Roadmap
 
-[ ] User can see a graphical representation of the word frequency in a bubble chart, column chart etc
+- [ ] User can see a graphical representation of the word frequency in a bubble chart, column chart etc
 
 ## Design
 
