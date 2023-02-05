@@ -12,13 +12,15 @@
             words = text
                 .toLowerCase()
                 .replace(/[^\w\s\\']|_/g, "") // Remove punctuations
-                .replace(/\s+/g, " ") // Replace empty lines, tabs, etc. with space
+                .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\s\t\r\n]/g, " ") // Replace empty lines, tabs, etc. with space
                 .split(' ');
 
             let wordsFiltered = [...new Set(words)];
 
             // Generate array with objects
             words = wordsFiltered
+                // Remove empty strings
+                .filter(word => word !== '')
                 .map((word) => {
                     // Get the number of the same words
                     let num = words.filter(x => x === word).length;
